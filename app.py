@@ -20,7 +20,7 @@ def predict():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
-    predicted_y = int(prediction)
+    predicted_y = int(np.round(prediction, 2))
     
     #html çıktısına geri gondermek
     return render_template('template.html', prediction_text='Predicted Sales: {}'.format(predicted_y))
