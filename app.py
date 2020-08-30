@@ -27,5 +27,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run()
-    app.static_folder = 'static'
+    app.run(debug=True)
