@@ -24,7 +24,7 @@ def predict():
     predicted_y = np.round(prediction, 2)
     
     #html çıktısına geri gondermek
-    return render_template('template.html', prediction_text='Predicted Sales: {}'.format(predicted_y))
+    return render_template('template.html', prediction_text='Predicted House Price: ${}'.format(predicted_y[0]))
 
 
 if __name__ == "__main__":
