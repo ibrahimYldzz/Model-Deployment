@@ -17,8 +17,8 @@ def predict():
     
     #Arayüzdeki text'lere girilen değerleri alıp hesaplama sonrası tekrar arayüze göndereceğiz.
     int_features = [int(x) for x in request.form.values()]    
-    user_input = [int_features[0], int_features[1],int_features[2],0,0,0,0,0,0,int_features[3],0]
-    final_features = [np.array(user_input)]
+    
+    final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
     predicted_y = np.round(prediction, 2)
